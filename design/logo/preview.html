@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logo concepts — Naveen Jain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&family=Sora:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f1f5f9;
+        --card: #fff;
+        --ink: #0f172a;
+        --muted: #64748b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        padding: 2rem;
+      }
+      h1 {
+        font-family: Sora, sans-serif;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+      }
+      p {
+        color: var(--muted);
+        max-width: 52rem;
+        line-height: 1.6;
+      }
+      .grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        margin-top: 2rem;
+      }
+      .card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 1.5rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
+      }
+      .card h2 {
+        font-family: Sora, sans-serif;
+        font-size: 1.15rem;
+        margin: 0 0 0.25rem;
+      }
+      .card .tag {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #3b82f6;
+        text-transform: uppercase;
+      }
+      .sizes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: flex-end;
+        margin: 1.25rem 0;
+      }
+      .sizes figure {
+        margin: 0;
+        text-align: center;
+      }
+      .sizes figcaption {
+        font-size: 0.7rem;
+        color: var(--muted);
+        margin-top: 0.35rem;
+      }
+      .dark-strip {
+        background: #030712;
+        border-radius: 12px;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      .lockup {
+        margin-top: 1rem;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        padding-top: 1rem;
+      }
+      .lockup img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+      }
+      .rec {
+        border: 2px solid #3b82f6;
+      }
+      .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 0.2rem 0.5rem;
+        border-radius: 6px;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Logo &amp; favicon concepts</h1>
+    <p>
+      Compare mark and favicon at real UI sizes. Favicon row includes a simulated
+      16px scale. Pick a concept before we copy assets to <code>public/</code>
+      and wire the header.
+    </p>
+
+    <div class="grid">
+      <div class="card rec">
+        <span class="tag">Concept A</span>
+        <span class="badge">Recommended</span>
+        <h2>Stack</h2>
+        <p style="font-size: 0.85rem; margin: 0.5rem 0 0">
+          NJ monogram + layer lines — architecture &amp; delivery.
+        </p>
+        <div class="sizes">
+          <figure>
+            <img src="concept-a/mark.svg" width="120" height="120" alt="" />
+            <figcaption>120px mark</figcaption>
+          </figure>
+          <figure>
+            <img src="concept-a/favicon.svg" width="48" height="48" alt="" />
+            <figcaption>48px favicon</figcaption>
+          </figure>
+          <figure>
+            <img src="concept-a/favicon.svg" width="16" height="16" alt="" style="image-rendering: pixelated" />
+            <figcaption>16px sim</figcaption>
+          </figure>
+        </div>
+        <div class="dark-strip">
+          <img src="concept-a/mark.svg" width="40" height="40" alt="" />
+          <img src="concept-a/favicon.svg" width="32" height="32" alt="" />
+          <span style="color: #94a3b8; font-size: 0.8rem">On dark UI</span>
+        </div>
+        <div class="lockup">
+          <img src="concept-a/lockup.svg" alt="Lockup A" />
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Concept B</span>
+        <h2>Orbit</h2>
+        <p style="font-size: 0.85rem; margin: 0.5rem 0 0">
+          Orbital ring + satellite dot — systems &amp; programs at scale.
+        </p>
+        <div class="sizes">
+          <figure>
+            <img src="concept-b/mark.svg" width="120" height="120" alt="" />
+            <figcaption>120px mark</figcaption>
+          </figure>
+          <figure>
+            <img src="concept-b/favicon.svg" width="48" height="48" alt="" />
+            <figcaption>48px</figcaption>
+          </figure>
+          <figure>
+            <img src="concept-b/favicon.svg" width="16" height="16" alt="" />
+            <figcaption>16px sim</figcaption>
+          </figure>
+        </div>
+        <div class="dark-strip">
+          <img src="concept-b/mark.svg" width="40" height="40" alt="" />
+          <img src="concept-b/favicon.svg" width="32" height="32" alt="" />
+        </div>
+        <div class="lockup">
+          <img src="concept-b/lockup.svg" alt="Lockup B" />
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Concept C</span>
+        <h2>Bracket</h2>
+        <p style="font-size: 0.85rem; margin: 0.5rem 0 0">
+          Curly bracket frame — developer / technical lead signal.
+        </p>
+        <div class="sizes">
+          <figure>
+            <img src="concept-c/mark.svg" width="120" height="120" alt="" />
+            <figcaption>120px mark</figcaption>
+          </figure>
+          <figure>
+            <img src="concept-c/favicon.svg" width="48" height="48" alt="" />
+            <figcaption>48px</figcaption>
+          </figure>
+          <figure>
+            <img src="concept-c/favicon.svg" width="16" height="16" alt="" />
+            <figcaption>16px sim</figcaption>
+          </figure>
+        </div>
+        <div class="dark-strip">
+          <img src="concept-c/mark.svg" width="40" height="40" alt="" />
+          <img src="concept-c/favicon.svg" width="32" height="32" alt="" />
+        </div>
+        <div class="lockup">
+          <img src="concept-c/lockup.svg" alt="Lockup C" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

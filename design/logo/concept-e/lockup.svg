@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
+  <text x="0" y="52" font-family="Sora, system-ui, sans-serif" font-size="34" font-weight="600" fill="#0f172a" letter-spacing="-0.5">Naveen</text>
+  <text x="158" y="52" font-family="Sora, system-ui, sans-serif" font-size="34" font-weight="600" fill="#3b82f6">Jain</text>
+  <rect x="0" y="62" width="248" height="3" rx="1.5" fill="url(#el)"/>
+  <defs>
+    <linearGradient id="el" x1="0" y1="63" x2="248" y2="63">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="76" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.14em">FULL-STACK LEAD</text>
+</svg>

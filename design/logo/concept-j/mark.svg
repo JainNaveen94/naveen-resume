@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Platform module mark">
+  <rect width="120" height="120" rx="28" fill="#0f172a"/>
+  <path d="M60 28L92 48v40L60 108 28 88V48L60 28z" fill="none" stroke="#475569" stroke-width="1.2" opacity="0.4"/>
+  <path d="M60 36L80 48v32L60 92 40 80V48L60 36z" fill="#1e293b" stroke="#22d3ee" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M60 36v56M40 48l20 12M80 48L60 60" stroke="#3b82f6" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="60" cy="44" r="3" fill="#22d3ee"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" fill="none" aria-label="Naveen Jain">
+  <defs>
+    <linearGradient id="bl-bg" x1="0" y1="0" x2="80" y2="80">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="22" fill="url(#bl-bg)"/>
+  <ellipse cx="40" cy="40" rx="30" ry="28" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="5 6"/>
+  <g fill="#fff" transform="translate(16, 22) scale(0.55)">
+    <path d="M34 84V40h8l16.8 29.8V40H66v44H58.2L41.2 54.2V84H34z"/>
+    <path d="M72 40h8.8c10 0 16.8 5.6 16.8 16 0 6.8-2.8 11.6-8.4 14L106 84h-9.8L87 66.6h10.6c4.8 0 7.6-2.4 7.6-6.6 0-3.8-2.6-6.4-6.8-6.4H80.8V84H72V40z"/>
+  </g>
+  <text x="96" y="46" fill="#0f172a" font-family="Sora, system-ui, sans-serif" font-size="28" font-weight="600">Naveen Jain</text>
+  <text x="96" y="64" fill="#3b82f6" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="0.12em">TECHNICAL LEAD</text>
+</svg>

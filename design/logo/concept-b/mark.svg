@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Naveen Jain  Orbit monogram">
+  <defs>
+    <linearGradient id="b-bg" x1="12" y1="8" x2="108" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.48" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="b-ring" x1="0" y1="60" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="32" fill="url(#b-bg)"/>
+  <ellipse cx="60" cy="60" rx="48" ry="46" fill="none" stroke="url(#b-ring)" stroke-width="2.5" stroke-dasharray="8 10" transform="rotate(-24 60 60)"/>
+  <ellipse cx="60" cy="60" rx="36" ry="34" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="1.5"/>
+  <circle cx="96" cy="38" r="5" fill="#fff" opacity="0.95"/>
+  <g fill="#fff">
+    <path d="M34 84V40h8l16.8 29.8V40H66v44H58.2L41.2 54.2V84H34z"/>
+    <path d="M72 40h8.8c10 0 16.8 5.6 16.8 16 0 6.8-2.8 11.6-8.4 14L106 84h-9.8L87 66.6h10.6c4.8 0 7.6-2.4 7.6-6.6 0-3.8-2.6-6.4-6.8-6.4H80.8V84H72V40z"/>
+  </g>
+</svg>

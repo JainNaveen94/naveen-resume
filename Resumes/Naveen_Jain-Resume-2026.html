@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Naveen Jain — Technical Lead, Front-End Architecture &amp; Team Delivery</title>
+<style>
+  @page { size: A4; margin: 10mm 11mm 10mm 11mm; }
+
+  :root {
+    --ink: #1c2733;
+    --body: #2b3644;
+    --muted: #5b6875;
+    --accent: #1f6fb2;
+    --rule: #1c2733;
+    --light: #dfe5ec;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    margin: 0;
+    font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.9pt;
+    line-height: 1.3;
+    color: var(--body);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  p { margin: 0 0 4px 0; }
+  strong { font-weight: 600; color: var(--ink); }
+
+  /* ---------- header ---------- */
+  header { padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1.6px solid var(--rule); }
+
+  h1 {
+    margin: 0;
+    font-size: 25pt;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--ink);
+    line-height: 1.05;
+  }
+
+  .tagline { margin-top: 3px; font-size: 11pt; font-weight: 500; color: var(--accent); }
+
+  .contact { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 8.6pt; color: var(--body); }
+  .contact span { display: inline-flex; align-items: center; gap: 4px; }
+  .contact svg { width: 9px; height: 9px; fill: var(--accent); flex: none; }
+
+  /* ---------- two columns ---------- */
+  .cols { display: grid; grid-template-columns: 1fr 62mm; column-gap: 8mm; }
+  .main, .side { min-width: 0; }
+
+  section { margin-bottom: 9px; }
+
+  h2 {
+    margin: 0 0 6px 0;
+    font-size: 10.4pt;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding-bottom: 2.5px;
+    border-bottom: 1.2px solid var(--rule);
+  }
+
+  /* ---------- main column ---------- */
+  .summary p:last-child { margin-bottom: 0; }
+
+  .entry { margin-bottom: 8px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head, .org, .meta, .stack, h2, .side-item-title { break-after: avoid; }
+  li, .side-item, .edu, .skill-group { break-inside: avoid; }
+
+  .role { font-size: 10.2pt; font-weight: 600; color: var(--ink); }
+  .org { font-size: 9.4pt; font-weight: 500; color: var(--accent); margin-top: 1px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 8.3pt; color: var(--muted); margin-top: 1.5px; }
+  .meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .meta svg { width: 8px; height: 8px; fill: var(--muted); flex: none; }
+  .note { font-size: 8.5pt; color: var(--muted); font-style: italic; margin-top: 2px; }
+  .stack { font-size: 8.3pt; color: var(--muted); margin-top: 2px; }
+  .stack b { font-weight: 600; color: var(--body); }
+
+  ul { margin: 4px 0 0 0; padding-left: 11px; }
+  li { margin-bottom: 2.6px; padding-left: 1px; }
+  li::marker { color: var(--accent); }
+  ul.tight li { margin-bottom: 1.8px; }
+
+  /* ---------- side column ---------- */
+  .skill-group { margin-bottom: 5.5px; }
+  .skill-group .lbl { font-size: 8.2pt; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 1.5px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 3px 4px; }
+  .tag {
+    font-size: 8.3pt;
+    color: var(--body);
+    padding: 0.5px 5px 1px 5px;
+    border: 0.8px solid var(--light);
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .tag.hi { border-color: var(--accent); color: var(--ink); font-weight: 500; }
+
+  .side-item { margin-bottom: 7px; display: grid; grid-template-columns: 12px 1fr; column-gap: 6px; }
+  .side-item:last-child { margin-bottom: 0; }
+  .side-item svg { width: 11px; height: 11px; fill: var(--accent); margin-top: 2px; }
+  .side-item-title { font-size: 9.2pt; font-weight: 600; color: var(--ink); }
+  .side-item-text { font-size: 8.4pt; color: var(--body); margin-top: 1px; }
+
+  .edu { margin-bottom: 6px; }
+  .edu:last-child { margin-bottom: 0; }
+  .edu .deg { font-size: 9.2pt; font-weight: 600; color: var(--ink); }
+  .edu .inst { font-size: 8.4pt; color: var(--accent); font-weight: 500; margin-top: 1px; }
+  .edu .when { font-size: 8.2pt; color: var(--muted); margin-top: 1px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Naveen Jain</h1>
+  <div class="tagline">Technical Lead &middot; Front-End Architecture &amp; Team Delivery</div>
+  <div class="contact">
+    <span><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>+91-9999003538</span>
+    <span><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>naveen.jain94@hotmail.com</span>
+    <span><svg viewBox="0 0 24 24"><path d="M3.9 12a5 5 0 0 1 5-5h4v2h-4a3 3 0 0 0 0 6h4v2h-4a5 5 0 0 1-5-5zm6 1h4v-2h-4zm5-6h4a5 5 0 0 1 0 10h-4v-2h4a3 3 0 0 0 0-6h-4z"/></svg><a href="https://linkedin.com/in/naveen-jain-045500113">linkedin.com/in/naveen-jain-045500113</a></span>
+    <span><svg viewBox="0 0 24 24"><path d="M3.9 12a5 5 0 0 1 5-5h4v2h-4a3 3 0 0 0 0 6h4v2h-4a5 5 0 0 1-5-5zm6 1h4v-2h-4zm5-6h4a5 5 0 0 1 0 10h-4v-2h4a3 3 0 0 0 0-6h-4z"/></svg><a href="https://github.com/JainNaveen94">github.com/JainNaveen94</a></span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Delhi, India</span>
+  </div>
+</header>
+
+<div class="cols">
+
+<!-- ===================== MAIN COLUMN ===================== -->
+<div class="main">
+
+<section class="summary">
+  <h2>Summary</h2>
+  <p><strong>Technical lead</strong> with <strong>8+ years</strong> building and shipping <strong>TypeScript/JavaScript</strong>, <strong>HTML5</strong>, and <strong>CSS</strong> single-page applications, including <strong>4+ years</strong> leading <strong>front-end architecture</strong> and <strong>team delivery</strong> on enterprise and fintech products. Deep <strong>Vue.js SPA</strong> experience (500&ndash;900+ screen programs) plus <strong>React</strong> and <strong>React Web Components</strong> for shared UI.</p>
+  <p><strong>Leads technical delivery</strong> for programs of <strong>~20 cross-functional members</strong> (software engineers, <strong>QA</strong>, and <strong>business analysts</strong>): front-end <strong>architecture</strong>, <strong>coding standards</strong>, <strong>workload and task assignment</strong>, <strong>mentorship</strong>, <strong>performance feedback</strong>, <strong>code review</strong>, estimation, and client-facing closure in <strong>Agile</strong> environments. Coordinates front-end, back-end, UX, and QA so business requirements become feasible, scalable portal and component solutions.</p>
+  <p>Designs <strong>component libraries</strong> and <strong>complex REST API</strong> integrations; identifies <strong>performance bottlenecks</strong> using <strong>monitoring and alerting</strong> (<strong>Sentry</strong>, <strong>AWS CloudWatch</strong> logs and alarms) to cut production defects. Full-stack depth in <strong>Node.js</strong> and <strong>Spring Boot</strong> microservices, <strong>MySQL/SQL</strong>, <strong>OAuth 2.0</strong> (Auth0, Frontegg, MSAL), and <strong>AWS</strong> releases. <strong>CI/CD</strong> via <strong>GitLab</strong> and Jenkins; <strong>test-driven development</strong> with <strong>Jest</strong>, <strong>ts-mocha</strong>, <strong>JUnit</strong>, <strong>Storybook</strong>, and <strong>Chromatic</strong>. Applies <strong>AI-assisted engineering</strong> with <strong>MCP</strong>, <strong>Cursor</strong>, <strong>GitHub Copilot</strong>, and agent rules/skills for context-aware refactors.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="role entry-head">Technical Lead</div>
+    <div class="org">Algoworks Technologies Pvt. Ltd.</div>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14z"/></svg>Sep 2021 &ndash; Present</span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Noida, India</span>
+    </div>
+    <div class="note">Front-end architecture and technical delivery for fintech portal programs.</div>
+    <ul>
+      <li><strong>Own front-end leadership</strong> on fintech and enterprise accounts for a <strong>~20-person delivery organization</strong> (engineers, <strong>QA</strong>, <strong>BAs</strong>): plan and assign work, set team goals, track progress, and align output with client and organizational objectives.</li>
+      <li>Define and enforce <strong>front-end architecture</strong>, <strong>engineering standards</strong>, and <strong>Vue.js / TypeScript</strong> patterns for portal UI, <strong>web components</strong>, and <strong>Node.js</strong> services; run <strong>code reviews</strong> and best-practice sessions (target <strong>100% review coverage</strong> on shared and critical paths).</li>
+      <li><strong>Mentor</strong> engineers on SPA design, API integration, testing, and production support; contribute to <strong>recruitment</strong>, <strong>onboarding</strong>, and role-fit interviews for front-end and full-stack candidates.</li>
+      <li><strong>Translate business requirements</strong> (with BAs and client stakeholders) into technical scope, UI/API decisions, and release plans; coordinate <strong>front-end, back-end, UX, and QA</strong> on defects, change requests, and go-live readiness.</li>
+      <li>Drive <strong>documentation</strong> (API/UI conventions, release notes, runbooks) and <strong>quality practices</strong> (TDD, Storybook/Chromatic, linting) to reduce regressions and improve estimation accuracy.</li>
+      <li>Run post-release <strong>monitoring and alerting</strong> (<strong>Sentry</strong>, <strong>CloudWatch</strong> logs and alarms): triage production errors, prioritize fixes with QA, and feed recurring issues back into standards and test coverage.</li>
+      <li>Standardize <strong>AI-assisted delivery</strong> (MCP, Cursor, Copilot, agent rules and skills) for drafting, refactoring, and reviewing code against established architecture.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role entry-head">Senior Full Stack Developer</div>
+    <div class="org">Nagarro Software Pvt. Ltd.</div>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14z"/></svg>Jan 2019 &ndash; Aug 2021</span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Gurugram, India</span>
+    </div>
+    <ul>
+      <li>Built large <strong>Vue.js SPAs</strong> (500&ndash;900+ screens) and <strong>Spring Boot</strong> microservices for cloud operations, telecom assurance, and endpoint security.</li>
+      <li>Delivered REST APIs, Swagger contracts, Jenkins deployments, and client-facing resolution on UI, API, and production defects.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="entry">
+    <div class="role entry-head">Conversational Payments Platform</div>
+    <div class="org">Merchant &amp; Customer Portals &middot; Fintech</div>
+    <div class="note">Technical lead &middot; Front-end architecture &middot; ~20-member program (engineers, QA, BA)</div>
+    <div class="stack"><b>Technologies:</b> TypeScript, Vue.js, React, Pinia, Node.js, Auth0, Frontegg, OAuth 2.0, REST APIs, AWS, Salesforce API, CDN APIs, Jest, Storybook, Chromatic, Sentry, CloudWatch, GitLab, Git, Agile, MCP, Cursor</div>
+    <ul>
+      <li><strong>Single technical lead from inception</strong> for merchant and customer portals: set <strong>front-end roadmap</strong>, module ownership, and sprint priorities across <strong>engineers, QA, and BAs</strong>; primary client contact for UI architecture, API contracts, and production issues.</li>
+      <li><strong>Designed front-end architecture</strong>: <strong>TypeScript/Vue.js</strong> SPAs (Pinia), <strong>React</strong> web components for shared UI, routing, and separation between portal apps and embeddable components.</li>
+      <li><strong>Directed delivery</strong> of blueprint-based merchant workflows (payment, donation, signature, concern) with <strong>15+ action types</strong>; aligned BA-written requirements with feasible UI flows, acceptance criteria, and QA test strategy.</li>
+      <li><strong>Assigned and reviewed</strong> front-end and shared UI work; coached engineers on component reuse, state management, and <strong>secure OAuth 2.0</strong> flows (Auth0, Frontegg) for merchant and customer sessions.</li>
+      <li><strong>Owned ~20&ndash;30% of back-end delivery</strong>: scoped and built <strong>Node.js</strong> microservices; drove legacy service restructuring to current standards with back-end leads.</li>
+      <li><strong>Performance and quality</strong>: delivered <strong>dynamic routing</strong> and <strong>live/event-driven UI updates</strong>; triaged bottlenecks and integration defects with <strong>Sentry</strong> and <strong>CloudWatch</strong> monitoring/alerting; <strong>TDD</strong> with Jest and Storybook/Chromatic; <strong>AWS</strong> release coordination with QA sign-off.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role entry-head">Bank-to-Bank ACH Transfer (DirectPay)</div>
+    <div class="org">Web platform &middot; Fintech</div>
+    <div class="stack"><b>Technologies:</b> Vue.js, Pinia, Node.js, REST, FinServ APIs, AWS, Git, Agile</div>
+    <ul class="tight">
+      <li>Built account-registration and ACH transfer flows with FinServ API integration for bank verification, onboarding, and transaction processing.</li>
+      <li>Partnered with back-end teams on validation, access control, and session handling for financial compliance; closed client change requests on key modules.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role entry-head">Cloud Resource and Cost Management</div>
+    <div class="org">Micro-frontend &middot; 900+ screens</div>
+    <div class="stack"><b>Technologies:</b> Java 8, Spring Boot, Hibernate/JPA, Vue.js, Vuetify, Axios, Stylus, Ace.js</div>
+    <ul class="tight">
+      <li>Global enterprise cloud operations: delivered user and admin management, usage logs, billing, and module UI with a custom component library and Ace.js editor integration.</li>
+      <li>Built Spring Boot REST microservices with Swagger, paired with end-to-end Vue integration and client defect closure.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role entry-head">Endpoint Security Portals</div>
+    <div class="org">Admin, User, Agent &middot; 500+ screens</div>
+    <div class="stack"><b>Technologies:</b> Java 8, Spring Boot, Hibernate/JPA, Vue.js, Vuetify, Axios, Stylus</div>
+    <ul class="tight">
+      <li>Secure-mobility products for a global IT group: built large <strong>Vue.js SPA</strong> portals for usage logs, module CRUD, and custom UI with Vuetify and Stylus component design.</li>
+      <li>Delivered Spring Boot REST APIs and client POCs that proposed changes to the existing system.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role entry-head">Telecom Fault Monitoring &amp; AI Security Analytics</div>
+    <div class="org">Microservices &middot; dashboards</div>
+    <div class="stack"><b>Technologies:</b> Java 8, Spring Boot, Hibernate/JPA, web components, JavaScript, Chart.js, Bootstrap, Jenkins</div>
+    <ul class="tight">
+      <li>Global telecom assurance platform: built the fault-monitoring dashboard and the Spring Boot services behind it, with service-to-service communication, Swagger, and Jenkins releases.</li>
+      <li>Finnish telecom major: built a video-analytics monitoring UI for historical data, live feeds, and analytic charts, from PoC to production.</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<!-- ===================== SIDE COLUMN ===================== -->
+<div class="side">
+
+<section>
+  <h2>Technical Skills</h2>
+
+  <div class="skill-group"><div class="lbl">Languages</div>
+    <div class="tags"><span class="tag hi">TypeScript</span><span class="tag hi">JavaScript (ES6+)</span><span class="tag">Java 8&ndash;10</span><span class="tag">HTML5</span><span class="tag">CSS</span><span class="tag">SQL</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Front-End</div>
+    <div class="tags"><span class="tag hi">Vue.js (SPA, Pinia)</span><span class="tag hi">React</span><span class="tag">React Web Components</span><span class="tag">Angular</span><span class="tag">Vuetify</span><span class="tag">Material UI</span><span class="tag">Bootstrap</span><span class="tag">Stylus</span></div></div>
+
+  <div class="skill-group"><div class="lbl">State &amp; Data</div>
+    <div class="tags"><span class="tag">Pinia</span><span class="tag">Redux / Redux Toolkit</span><span class="tag">React Query</span><span class="tag">Context API</span><span class="tag">Axios</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Back-End &amp; APIs</div>
+    <div class="tags"><span class="tag">Node.js</span><span class="tag">Spring Boot</span><span class="tag">REST</span><span class="tag">Swagger/OpenAPI</span><span class="tag">Microservices</span><span class="tag">JSON/XML</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Databases</div>
+    <div class="tags"><span class="tag hi">MySQL</span><span class="tag">SQLite</span><span class="tag">Strong SQL</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Identity</div>
+    <div class="tags"><span class="tag">OAuth 2.0</span><span class="tag">Auth0</span><span class="tag">Frontegg</span><span class="tag">MSAL</span><span class="tag">Session &amp; access control</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Cloud &amp; CI/CD</div>
+    <div class="tags"><span class="tag hi">AWS</span><span class="tag hi">GitLab CI/CD</span><span class="tag">Jenkins</span><span class="tag">Git</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Monitoring</div>
+    <div class="tags"><span class="tag">Sentry</span><span class="tag">AWS CloudWatch (logs, alarms)</span><span class="tag">Production error triage</span><span class="tag">Release health</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Quality</div>
+    <div class="tags"><span class="tag hi">TDD</span><span class="tag">Jest</span><span class="tag">ts-mocha/nyc</span><span class="tag">JUnit</span><span class="tag">Storybook</span><span class="tag">Chromatic</span><span class="tag">ESLint</span><span class="tag">Code review</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Architecture</div>
+    <div class="tags"><span class="tag">Micro-frontends</span><span class="tag">Web components</span><span class="tag">Event-driven UI (live updates, messaging)</span><span class="tag">Performance tuning</span></div></div>
+
+  <div class="skill-group"><div class="lbl">AI / LLM</div>
+    <div class="tags"><span class="tag">MCP tool orchestration</span><span class="tag">Cursor</span><span class="tag">GitHub Copilot</span><span class="tag">Agent skills &amp; rules</span><span class="tag">LLM-assisted refactor and review</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Domains</div>
+    <div class="tags"><span class="tag">Fintech</span><span class="tag">Payments</span><span class="tag">Banking</span><span class="tag">Telecom</span><span class="tag">Insurance</span><span class="tag">Healthcare</span><span class="tag">Enterprise SaaS</span></div></div>
+
+  <div class="skill-group"><div class="lbl">Collaboration</div>
+    <div class="tags"><span class="tag">JIRA</span><span class="tag">Confluence</span><span class="tag">Agile/Scrum</span><span class="tag">Technical documentation</span><span class="tag">UX / back-end / BA alignment</span></div></div>
+</section>
+
+<section>
+  <h2>Key Achievements</h2>
+
+  <div class="side-item">
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+    <div><div class="side-item-title">AI Innovation in Delivery Award (2026)</div>
+    <div class="side-item-text">Algoworks; presented by the CEO at the Algomo &rsquo;26 ceremony.</div></div>
+  </div>
+
+  <div class="side-item">
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+    <div><div class="side-item-title">Cheer Board, three times</div>
+    <div class="side-item-text">Named for performance by Nagarro and its clients; customer appreciation on multiple engagements at Nagarro and Algoworks.</div></div>
+  </div>
+
+  <div class="side-item">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.4-3.6-3.6 1.4-1.4 2.2 2.2 5-5 1.4 1.4z"/></svg>
+    <div><div class="side-item-title">100% code review coverage target</div>
+    <div class="side-item-text">Reviews and best-practice sessions on all shared and critical paths, feeding production issues back into standards and tests.</div></div>
+  </div>
+
+  <div class="side-item">
+    <svg viewBox="0 0 24 24"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.3 0-7 1.2-7 3.5V19h14v-2.5C15 14.2 10.3 13 8 13zm8 0c-.3 0-.6 0-1 .1 1.2.8 2 1.9 2 3.4V19h6v-2.5c0-2.3-4.7-3.5-7-3.5z"/></svg>
+    <div><div class="side-item-title">~20-person cross-functional delivery</div>
+    <div class="side-item-text">Leads engineers, QA, and business analysts on fintech portal programs from inception to production.</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="edu">
+    <div class="deg">Master of Computer Applications (MCA)</div>
+    <div class="inst">Bharati Vidyapeeth&rsquo;s Institute of Computer Applications and Management, Indraprastha University, Delhi</div>
+    <div class="when">2016 &ndash; 2019</div>
+  </div>
+  <div class="edu">
+    <div class="deg">Bachelor of Computer Applications (BCA)</div>
+    <div class="inst">Sri Guru Tegh Bahadur Institute of Management and Information Technology, Indraprastha University, Delhi</div>
+    <div class="when">2013 &ndash; 2016</div>
+  </div>
+</section>
+
+</div>
+</div>
+
+</body>
+</html>

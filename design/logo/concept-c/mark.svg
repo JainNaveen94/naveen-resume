@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Naveen Jain  Bracket monogram">
+  <defs>
+    <linearGradient id="c-bg" x1="12" y1="8" x2="108" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.48" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="c-br" x1="20" y1="60" x2="100" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="32" fill="url(#c-bg)"/>
+  <path fill="none" stroke="url(#c-br)" stroke-width="5" stroke-linecap="round" d="M28 36c0-6 5-11 11-11h8M28 84c0 6 5 11 11 11h8"/>
+  <path fill="none" stroke="url(#c-br)" stroke-width="5" stroke-linecap="round" d="M92 36c0-6-5-11-11-11h-8M92 84c0 6-5 11-11 11h-8"/>
+  <g fill="#fff">
+    <path d="M42 84V38h7.6l17.4 31V38h7.6v46H67L49.6 53V84H42z"/>
+    <path d="M80 38h9c10.2 0 17.2 5.8 17.2 16.6 0 7-3 12-9 14.6L112 84h-10.2L91.2 66.8h11c5 0 7.8-2.5 7.8-7 0-4-2.7-6.6-7.2-6.6H89.8V84H80V38z"/>
+  </g>
+</svg>

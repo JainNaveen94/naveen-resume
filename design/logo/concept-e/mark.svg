@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="NJ monogram">
+  <defs>
+    <linearGradient id="e-stroke" x1="20" y1="100" x2="100" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="0.45" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#f8fafc"/>
+  <rect x="0.5" y="0.5" width="119" height="119" rx="27.5" stroke="#e2e8f0" fill="none"/>
+  <text
+    x="60"
+    y="72"
+    text-anchor="middle"
+    font-family="Sora, Georgia, serif"
+    font-size="52"
+    font-weight="600"
+    fill="url(#e-stroke)"
+    letter-spacing="-3"
+  >
+    NJ
+  </text>
+</svg>

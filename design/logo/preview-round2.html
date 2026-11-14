@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logo round 2 — Naveen Jain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&family=Sora:wght@600&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; margin: 0; padding: 2rem; background: #e2e8f0; color: #0f172a; }
+      h1 { font-family: Sora, sans-serif; font-weight: 600; }
+      .note { max-width: 42rem; color: #475569; line-height: 1.65; }
+      .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 1.5rem; }
+      .card { background: #fff; border-radius: 16px; padding: 1.25rem 1.5rem; border: 1px solid #cbd5e1; }
+      .card h2 { font-family: Sora, sans-serif; margin: 0.25rem 0 0; font-size: 1.1rem; }
+      .tag { font-size: 0.7rem; font-weight: 700; color: #3b82f6; letter-spacing: 0.1em; }
+      .sizes { display: flex; gap: 1rem; align-items: flex-end; margin: 1rem 0; flex-wrap: wrap; }
+      figcaption { font-size: 0.65rem; color: #64748b; text-align: center; margin-top: 0.25rem; }
+      figure { margin: 0; }
+      .dark { background: #030712; padding: 0.75rem; border-radius: 10px; display: flex; gap: 0.75rem; align-items: center; margin-top: 0.75rem; }
+      .dark span { color: #94a3b8; font-size: 0.75rem; }
+      .lockup img { max-width: 100%; margin-top: 0.75rem; }
+      .rec { outline: 2px solid #3b82f6; outline-offset: 2px; }
+      .pill { display: inline-block; background: #0f172a; color: #22d3ee; font-size: 0.65rem; padding: 0.15rem 0.45rem; border-radius: 4px; margin-left: 0.35rem; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <h1>Round 2 — calmer, senior lead aesthetic</h1>
+    <p class="note">
+      Less “gradient app icon,” more consulting / principal-engineer tone.
+      Compare on light page and dark strip. Tell us which direction feels closest—or what to avoid.
+    </p>
+    <div class="grid">
+      <div class="card rec">
+        <span class="tag">D</span><span class="pill">Lead pick</span>
+        <h2>Compass</h2>
+        <p style="font-size:0.85rem;color:#64748b;margin:0.35rem 0 0">Dark tile, arch path, single N — architecture &amp; direction.</p>
+        <div class="sizes">
+          <figure><img src="concept-d/mark.svg" width="112" height="112" alt="" /><figcaption>Mark</figcaption></figure>
+          <figure><img src="concept-d/favicon.svg" width="32" height="32" alt="" /><figcaption>32px</figcaption></figure>
+          <figure><img src="concept-d/favicon.svg" width="16" height="16" alt="" style="image-rendering:crisp-edges" /><figcaption>16px</figcaption></figure>
+        </div>
+        <div class="dark">
+          <img src="concept-d/mark.svg" width="36" height="36" alt="" />
+          <span>Header on dark UI</span>
+        </div>
+        <div class="lockup"><img src="concept-d/lockup.svg" alt="Lockup D" width="360" /></div>
+      </div>
+      <div class="card">
+        <span class="tag">E</span>
+        <h2>Typographic</h2>
+        <p style="font-size:0.85rem;color:#64748b;margin:0.35rem 0 0">Light tile, NJ ligature; favicon is N + accent rule.</p>
+        <div class="sizes">
+          <figure><img src="concept-e/mark.svg" width="112" height="112" alt="" /></figure>
+          <figure><img src="concept-e/favicon.svg" width="32" height="32" alt="" /></figure>
+          <figure><img src="concept-e/favicon.svg" width="16" height="16" alt="" /></figure>
+        </div>
+        <div class="dark">
+          <img src="concept-e/mark.svg" width="36" height="36" alt="" style="outline:1px solid #334155;border-radius:8px" />
+          <span>Mark is light-first</span>
+        </div>
+        <div class="lockup"><img src="concept-e/lockup.svg" alt="Lockup E" width="360" /></div>
+      </div>
+      <div class="card">
+        <span class="tag">F</span>
+        <h2>Layers</h2>
+        <p style="font-size:0.85rem;color:#64748b;margin:0.35rem 0 0">No letters in icon — sharpest favicon; name beside mark.</p>
+        <div class="sizes">
+          <figure><img src="concept-f/mark.svg" width="112" height="112" alt="" /></figure>
+          <figure><img src="concept-f/favicon.svg" width="32" height="32" alt="" /></figure>
+          <figure><img src="concept-f/favicon.svg" width="16" height="16" alt="" /></figure>
+        </div>
+        <div class="dark">
+          <img src="concept-f/mark.svg" width="36" height="36" alt="" />
+          <span>Works on dark chrome</span>
+        </div>
+        <div class="lockup"><img src="concept-f/lockup.svg" alt="Lockup F" width="360" /></div>
+      </div>
+    </div>
+    <p class="note" style="margin-top:2rem"><a href="preview.html">Round 1 (A–C)</a> still in repo for comparison.</p>
+  </body>
+</html>

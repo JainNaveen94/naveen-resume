@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 420 88" fill="none" role="img" aria-label="Naveen Jain Technical Lead">
+  <defs>
+    <clipPath id="lh">
+      <circle cx="44" cy="44" r="40"/>
+    </clipPath>
+  </defs>
+  <circle cx="44" cy="44" r="42" fill="#f1f5f9"/>
+  <image href="assets/headshot.png" x="4" y="4" width="80" height="80" clip-path="url(#lh)" preserveAspectRatio="xMidYMid slice"/>
+  <circle cx="44" cy="44" r="40" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Sora, system-ui, sans-serif" font-size="28" font-weight="600" fill="#0f172a">Naveen Jain</text>
+  <text x="100" y="66" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#64748b" letter-spacing="0.14em">TECHNICAL LEAD · FULL-STACK ARCHITECTURE</text>
+  <rect x="100" y="72" width="200" height="2" rx="1" fill="#3b82f6" opacity="0.5"/>
+</svg>

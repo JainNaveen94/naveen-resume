@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120" fill="none" role="img" aria-label="Naveen Jain">
+  <defs>
+    <clipPath id="photo-clip">
+      <circle cx="60" cy="60" r="54"/>
+    </clipPath>
+    <linearGradient id="photo-ring" x1="20" y1="20" x2="100" y2="100">
+      <stop stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="#f1f5f9"/>
+  <image
+    href="assets/headshot.png"
+    x="6"
+    y="6"
+    width="108"
+    height="108"
+    clip-path="url(#photo-clip)"
+    preserveAspectRatio="xMidYMid slice"
+  />
+  <circle cx="60" cy="60" r="54" fill="none" stroke="url(#photo-ring)" stroke-width="2"/>
+  <path d="M14 78 Q60 98 106 78" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+</svg>

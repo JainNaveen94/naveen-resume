@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Naveen Jain">
+  <defs>
+    <linearGradient id="d-arch" x1="24" y1="88" x2="96" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#0f172a"/>
+  <path
+    d="M28 82 Q60 28 92 38"
+    fill="none"
+    stroke="url(#d-arch)"
+    stroke-width="3.5"
+    stroke-linecap="round"
+  />
+  <circle cx="92" cy="38" r="4" fill="#22d3ee"/>
+  <path
+    fill="#f8fafc"
+    d="M44 84V36h6.8l15.5 27.8V36h6.8v48H63.3L48 50.8V84H44z"
+  />
+</svg>

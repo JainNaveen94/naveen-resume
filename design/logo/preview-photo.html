@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logo — Photo + consulting wordmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&family=Sora:wght@600&display=swap" rel="stylesheet" />
+    <style>
+      :root { --bg: #f1f5f9; --ink: #0f172a; --muted: #64748b; }
+      body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--ink); }
+      h1 { font-family: Sora, sans-serif; font-weight: 600; font-size: 1.5rem; }
+      .lead { max-width: 40rem; color: var(--muted); line-height: 1.65; font-size: 0.95rem; }
+      .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.5rem; max-width: 720px; margin-top: 1.25rem; }
+      .row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin: 1rem 0; }
+      figcaption { font-size: 0.7rem; color: var(--muted); margin-top: 0.35rem; text-align: center; }
+      .header-mock {
+        display: flex; align-items: center; gap: 12px; padding: 12px 20px; background: rgba(248,250,252,0.95);
+        border: 1px solid #e2e8f0; border-radius: 12px; max-width: 520px;
+      }
+      .header-mock .meta { line-height: 1.25; }
+      .header-mock strong { font-family: Sora, sans-serif; font-size: 1.05rem; font-weight: 600; }
+      .header-mock small { color: var(--muted); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; }
+      .dark-mock {
+        background: #030712; padding: 12px 20px; border-radius: 12px; max-width: 520px; margin-top: 1rem;
+        display: flex; align-items: center; gap: 12px;
+      }
+      .dark-mock strong { color: #f1f5f9; font-family: Sora, sans-serif; }
+      .dark-mock small { color: #94a3b8; font-size: 0.7rem; }
+      .dark-mock img { border: 1px solid #334155; border-radius: 50%; }
+      ul { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <h1>Photo + wordmark (consulting style)</h1>
+    <p class="lead">
+      No gradient app icon. Your photo is the mark; typography carries leadership positioning.
+      Subtle slate ring + optional accent arc (can remove). Matches “principal engineer / consulting” tone.
+    </p>
+
+    <div class="panel">
+      <h2 style="font-family:Sora,sans-serif;font-size:1rem;margin:0 0 1rem">Assets</h2>
+      <div class="row">
+        <figure>
+          <img src="concept-photo/mark.svg" width="120" height="120" alt="" />
+          <figcaption>Mark 120px</figcaption>
+        </figure>
+        <figure>
+          <img src="concept-photo/favicon.svg" width="32" height="32" alt="" />
+          <figcaption>Favicon 32px</figcaption>
+        </figure>
+        <figure>
+          <img src="concept-photo/favicon.svg" width="16" height="16" alt="" style="image-rendering:auto" />
+          <figcaption>16px tab</figcaption>
+        </figure>
+      </div>
+      <img src="concept-photo/lockup-horizontal.svg" alt="Horizontal lockup" width="100%" style="max-width:420px;margin-top:0.5rem" />
+
+      <h2 style="font-family:Sora,sans-serif;font-size:1rem;margin:1.5rem 0 0.75rem">Header mock</h2>
+      <div class="header-mock">
+        <img src="assets/headshot.png" width="40" height="40" alt="" style="border-radius:50%;object-fit:cover;border:1px solid #e2e8f0" />
+        <div class="meta">
+          <strong>Naveen Jain</strong><br />
+          <small>TECHNICAL LEAD</small>
+        </div>
+      </div>
+      <div class="dark-mock">
+        <img src="assets/headshot.png" width="40" height="40" alt="" style="object-fit:cover" />
+        <div class="meta">
+          <strong>Naveen Jain</strong><br />
+          <small>TECHNICAL LEAD</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 style="font-family:Sora,sans-serif;font-size:1rem;margin:0">Implementation notes</h2>
+      <ul>
+        <li>Copy <code>assets/headshot.png</code> → <code>public/avatar.png</code> (optimize WebP optional).</li>
+        <li>Header: 40×40 circle + name (no separate “logo” file required).</li>
+        <li>Favicon: export PNG 32/180 from photo crop or use SVG with embedded image.</li>
+        <li>Remove blue arc from mark if you want strictly minimal consulting look.</li>
+      </ul>
+    </div>
+
+    <p class="lead" style="margin-top:1.5rem">
+      <a href="preview-round2.html">Round 2 abstract marks</a> ·
+      <a href="preview.html">Round 1</a>
+    </p>
+  </body>
+</html>
