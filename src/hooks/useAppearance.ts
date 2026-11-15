@@ -1,9 +1,8 @@
 import type { PaletteMode } from '@mui/material/styles';
 import { useCallback, useMemo, useState } from 'react';
 import {
-  ACCENT_PRESETS,
   CUSTOM_ACCENT_DEFAULT,
-  DEFAULT_ACCENT_ID,
+  getInitialAccentId,
   resolveAccentPalette,
   STORAGE_KEYS,
   type AccentPresetId,
@@ -17,12 +16,6 @@ function readStorage<T extends string>(key: string, fallback: T): T {
   return v as T;
 }
 
-function isAccentId(value: string): value is AccentPresetId {
-  return (
-    value in ACCENT_PRESETS || value === 'custom'
-  );
-}
-
 export function useAppearance() {
   const [colorMode, setColorModeState] = useState<PaletteMode>(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.colorMode);
@@ -32,10 +25,7 @@ export function useAppearance() {
       : 'light';
   });
 
-  const [accentId, setAccentIdState] = useState<AccentPresetId>(() => {
-    const stored = readStorage(STORAGE_KEYS.accentId, DEFAULT_ACCENT_ID);
-    return isAccentId(stored) ? stored : DEFAULT_ACCENT_ID;
-  });
+  const [accentId, setAccentIdState] = useState<AccentPresetId>(getInitialAccentId);
 
   const [customHex, setCustomHexState] = useState<string>(() =>
     readStorage(STORAGE_KEYS.customHex, CUSTOM_ACCENT_DEFAULT),

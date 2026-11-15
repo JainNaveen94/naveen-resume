@@ -13,7 +13,6 @@ import { EducationSection } from '@/sections/EducationSection';
 import { ExperienceSection } from '@/sections/ExperienceSection';
 import { HowIWorkSection } from '@/sections/HowIWorkSection';
 import { HeroSection } from '@/sections/HeroSection';
-import { LearningSection } from '@/sections/LearningSection';
 import { ProjectsSection } from '@/sections/ProjectsSection';
 import { SiteFooter } from '@/sections/SiteFooter';
 import { SkillsSection } from '@/sections/SkillsSection';
@@ -107,7 +106,6 @@ function App() {
           />
           <AchievementsSection achievements={resume.achievements} />
           <EducationSection education={resume.education} />
-          <LearningSection entries={resume.learning} />
           <ContactSection profile={resume.profile} />
         </main>
 

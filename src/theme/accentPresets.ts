@@ -58,14 +58,38 @@ export const ACCENT_PRESET_IDS = Object.keys(
   ACCENT_PRESETS,
 ) as Array<keyof typeof ACCENT_PRESETS>;
 
-export const DEFAULT_ACCENT_ID: AccentPresetId = 'aurora';
-export const CUSTOM_ACCENT_DEFAULT = '#3b82f6';
+/** First-time visitors (no saved choice): Sunset = orange accent. */
+export const DEFAULT_ACCENT_ID: AccentPresetId = 'sunset';
+
+/** Toggle to `'random'` for a random preset on first visit instead of Sunset. */
+export const FIRST_VISIT_ACCENT: 'sunset' | 'random' = 'sunset';
+
+export const CUSTOM_ACCENT_DEFAULT = '#f97316';
 
 export const STORAGE_KEYS = {
   accentId: 'naveen-accent-id',
   customHex: 'naveen-accent-custom-hex',
   colorMode: 'naveen-color-mode',
 } as const;
+
+/** Preset accent: localStorage when the user has chosen (or auto-seeded once). */
+export function getInitialAccentId(): AccentPresetId {
+  if (typeof window === 'undefined') return DEFAULT_ACCENT_ID;
+
+  const stored = localStorage.getItem(STORAGE_KEYS.accentId);
+  if (stored && (stored in ACCENT_PRESETS || stored === 'custom')) {
+    return stored as AccentPresetId;
+  }
+
+  let initial: AccentPresetId = DEFAULT_ACCENT_ID;
+  if (FIRST_VISIT_ACCENT === 'random' && ACCENT_PRESET_IDS.length > 0) {
+    const idx = Math.floor(Math.random() * ACCENT_PRESET_IDS.length);
+    initial = ACCENT_PRESET_IDS[idx];
+  }
+
+  localStorage.setItem(STORAGE_KEYS.accentId, initial);
+  return initial;
+}
 
 export function resolveAccentPalette(
   accentId: AccentPresetId,

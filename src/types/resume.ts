@@ -63,6 +63,7 @@ export type SkillGroupIcon =
   | 'identity'
   | 'cloud'
   | 'quality'
+  | 'architecture'
   | 'domain';
 
 export interface SkillGroup {
@@ -89,13 +90,6 @@ export interface WorkPrinciple {
   icon: 'architecture' | 'quality' | 'ai' | 'people';
 }
 
-export interface LearningEntry {
-  id: string;
-  title: string;
-  description: string;
-  href: string;
-}
-
 export interface EducationEntry {
   degree: string;
   institution: string;
@@ -117,7 +111,6 @@ export interface ResumeData {
   achievements: AchievementEntry[];
   education: EducationEntry[];
   workPrinciples: WorkPrinciple[];
-  learning: LearningEntry[];
   metrics: MetricHighlight[];
 }
 

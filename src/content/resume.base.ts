@@ -1,6 +1,5 @@
 import type {
   AchievementEntry,
-  LearningEntry,
   WorkPrinciple,
   EducationEntry,
   ExperienceEntry,
@@ -40,15 +39,16 @@ export const experience: ExperienceEntry[] = [
     location: 'Noida, India',
     start: 'Sep 2021',
     end: 'Present',
-    note: 'Front-end architecture and technical delivery for fintech portal programs.',
+    note: 'Front-end architecture and technical delivery for fintech and professional-services portal programs.',
     highlights: [
+      'Currently lead a 9-member cross-functional team (BA, 2 UI/UX designers, 2 frontend, 2 backend and 2 QA engineers) on a secure client and internal engagement portal built with React, TypeScript and Azure: priorities, architecture decisions, QA standards and release readiness against a fixed delivery date.',
       'Own front-end leadership on fintech and enterprise accounts for a ~20-person delivery organization (engineers, QA, BAs): plan and assign work, set team goals, track progress, and align output with client and organizational objectives.',
       'Define and enforce front-end architecture, engineering standards, and Vue.js / TypeScript patterns for portal UI, web components, and Node.js services; run code reviews and best-practice sessions (target 100% review coverage on shared and critical paths).',
       'Mentor engineers on SPA design, API integration, testing, and production support; contribute to recruitment, onboarding, and role-fit interviews for front-end and full-stack candidates.',
       'Translate business requirements (with BAs and client stakeholders) into technical scope, UI/API decisions, and release plans; coordinate front-end, back-end, UX, and QA on defects, change requests, and go-live readiness.',
       'Drive documentation (API/UI conventions, release notes, runbooks) and quality practices (TDD, Storybook/Chromatic, linting) to reduce regressions and improve estimation accuracy.',
       'Run post-release monitoring and alerting (Sentry, CloudWatch): triage production errors, prioritize fixes with QA, and feed recurring issues back into standards and test coverage.',
-      'Standardize AI-assisted delivery (MCP, Cursor, Copilot, agent rules and skills) for drafting, refactoring, and reviewing code against established architecture.',
+      'Standardize AI-assisted delivery (MCP, Cursor, Copilot, Claude Code, agent rules and skills) for drafting, refactoring, and reviewing code against established architecture, and use MCP integrations (Azure DevOps, Microsoft 365, Jira) for contract analysis and delivery tracking.',
     ],
   },
   {
@@ -66,6 +66,43 @@ export const experience: ExperienceEntry[] = [
 ];
 
 export const projects: ProjectEntry[] = [
+  {
+    id: 'secure-engagement-portal',
+    title: 'Secure Engagement and Evidence Portal',
+    subtitle: 'Client-facing & internal web portal · Professional services',
+    roleNote: 'Technical lead · 9-member cross-functional team · Current project',
+    domainTags: ['Professional Services', 'Security'],
+    techTags: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'TanStack Query',
+      'Zod',
+      'Tailwind CSS',
+      'Vitest',
+      'Playwright',
+      'Node.js',
+      'Azure',
+      'MCP',
+      'Claude Code',
+      'REST',
+    ],
+    stackLine:
+      'React, TypeScript, Vite, TanStack Query, Zod, Tailwind CSS, Vitest, Playwright, Node.js, REST/OpenAPI, Azure (App Service, Entra ID, SQL, Blob Storage, DevOps pipelines), MCP, Claude Code, Agile',
+    featured: true,
+    highlights: [
+      'Led a 9-member cross-functional team (business analyst, 2 UI/UX designers, 2 frontend, 2 backend and 2 QA engineers) from requirements to release: set priorities, split work, reviewed pull requests and unblocked decisions to meet the delivery date.',
+      'Led QA: set the test-case standard with the 2 QA engineers (structure, naming, and the screens and scenarios each case must cover). Cases for login, engagement dashboard, create-engagement, uploads and deliverables live in the repository next to the code.',
+      'Led backend development and helped define the architecture: REST contracts, role-based access rules for internal and external users, and how data is split across Azure SQL and Blob Storage.',
+      'Closed backend gaps when the date got tight: found 48 gaps by reviewing the live OpenAPI and requirements tracker, including a security gap where engagement lists weren’t limited to the user, and drove each fix through to frontend integration (scoped lists, safe close/archive, seven-digit engagement IDs, team rosters, audit sorting and a Blob-based file and request layer).',
+      'Built two products on one codebase, an internal portal and a client portal, with the server deciding each user’s role. Internal: dashboard, engagement workspace, requests, files, deliverables, users and audit log. Client: uploads, request tracking and deliverables.',
+      'Cut delivery risk with a mock-or-real-API data layer, switched per feature at build time: the frontend never waited on the backend and screens went live one at a time. Per-screen show/hide switches and version-controlled environment config turned staged releases into a config change, alongside DevOps staged-slot pipelines on Azure.',
+      'Turned designs and business rules into working screens with the UI/UX designers and the BA, settled open questions such as how request completion and engagement status behave, and demoed to the client in the weekly status call, turning feedback into prioritized backlog items.',
+      'Raised code quality: merged two parallel upload implementations into one, removed duplicated components and an unused dependency, and enforced strict typing with about 180 automated tests plus end-to-end checks against real environments.',
+      'Proposed product improvements that shipped (a context-aware support-email shortcut, live request-based progress on cards, upload validation and folder-name rules) and caught where the build contradicted agreed business rules before it reached users.',
+      'AI-assisted engineering: used MCP integrations (Azure DevOps, Microsoft 365, Jira) and Claude Code for contract analysis, code review and delivery tracking.',
+    ],
+  },
   {
     id: 'conversational-payments',
     title: 'Conversational Payments Platform',
@@ -85,6 +122,10 @@ export const projects: ProjectEntry[] = [
       'Cursor',
       'GitLab',
       'TDD',
+      'React Web Components',
+      'Pinia',
+      'REST',
+      'Microservices',
     ],
     stackLine:
       'TypeScript, Vue.js, React, Pinia, Node.js, Auth0, Frontegg, OAuth 2.0, REST, AWS, Salesforce API, Jest, Storybook, Chromatic, Sentry, CloudWatch, GitLab',
@@ -104,7 +145,7 @@ export const projects: ProjectEntry[] = [
     title: 'Bank-to-Bank ACH Transfer (DirectPay)',
     subtitle: 'Web platform · Fintech',
     domainTags: ['Fintech', 'Banking'],
-    techTags: ['Vue.js', 'Pinia', 'Node.js', 'AWS'],
+    techTags: ['Vue.js', 'Pinia', 'Node.js', 'AWS', 'REST'],
     stackLine: 'Vue.js, Pinia, Node.js, REST, FinServ APIs, AWS, Git, Agile',
     highlights: [
       'Built account-registration and ACH transfer flows with FinServ API integration for bank verification, onboarding, and transaction processing.',
@@ -116,7 +157,7 @@ export const projects: ProjectEntry[] = [
     title: 'Cloud Resource and Cost Management',
     subtitle: 'Micro-frontend · 900+ screens',
     domainTags: ['Enterprise SaaS'],
-    techTags: ['Vue.js', 'Spring Boot', 'Vuetify', 'Java'],
+    techTags: ['Vue.js', 'Spring Boot', 'Vuetify', 'Java', 'Micro-frontends', 'Microservices', 'REST'],
     stackLine: 'Java 8, Spring Boot, Hibernate/JPA, Vue.js, Vuetify, Axios, Stylus, Ace.js',
     highlights: [
       'Global enterprise cloud operations: user and admin management, usage logs, billing, and module UI with a custom component library and Ace.js editor integration.',
@@ -128,7 +169,7 @@ export const projects: ProjectEntry[] = [
     title: 'Endpoint Security Portals',
     subtitle: 'Admin, User, Agent · 500+ screens',
     domainTags: ['Enterprise SaaS'],
-    techTags: ['Vue.js', 'Spring Boot', 'Vuetify'],
+    techTags: ['Vue.js', 'Spring Boot', 'Vuetify', 'Java', 'REST'],
     stackLine: 'Java 8, Spring Boot, Hibernate/JPA, Vue.js, Vuetify, Axios, Stylus',
     highlights: [
       'Secure-mobility products for a global IT group: large Vue.js SPA portals for usage logs, module CRUD, and custom UI with Vuetify and Stylus.',
@@ -140,7 +181,7 @@ export const projects: ProjectEntry[] = [
     title: 'Telecom Fault Monitoring & AI Security Analytics',
     subtitle: 'Microservices · dashboards',
     domainTags: ['Telecom'],
-    techTags: ['Spring Boot', 'JavaScript', 'Chart.js'],
+    techTags: ['Spring Boot', 'JavaScript', 'Chart.js', 'Java', 'Microservices'],
     stackLine:
       'Java 8, Spring Boot, Hibernate/JPA, web components, JavaScript, Chart.js, Bootstrap, Jenkins',
     highlights: [
@@ -153,12 +194,13 @@ export const projects: ProjectEntry[] = [
 export const skills: SkillGroup[] = [
   {
     id: 'languages',
-    label: 'Languages',
+    label: 'Languages & Runtimes',
     icon: 'code',
     skills: [
       { name: 'TypeScript', highlight: true },
       { name: 'JavaScript (ES6+)', highlight: true, tag: 'JavaScript' },
-      { name: 'Java' },
+      { name: 'Node.js', highlight: true },
+      { name: 'Java', highlight: true },
       { name: 'HTML5' },
       { name: 'CSS' },
       { name: 'SQL' },
@@ -174,10 +216,14 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'Vue.js (SPA, Pinia)', highlight: true, tag: 'Vue.js' },
       { name: 'React', highlight: true },
-      { name: 'React Web Components' },
+      { name: 'React Web Components', highlight: true },
+      { name: 'Micro-frontends', highlight: true },
       { name: 'Vuetify' },
       { name: 'Material UI' },
+      { name: 'Tailwind CSS' },
+      { name: 'Stylus' },
       { name: 'Bootstrap' },
+      { name: 'Vite' },
     ],
   },
   {
@@ -186,10 +232,11 @@ export const skills: SkillGroup[] = [
     icon: 'ai',
     featured: true,
     blurb:
-      'Standardized across the team to draft, refactor and review code against the agreed architecture.',
+      'Standardized across the team to draft, refactor and review code against the agreed architecture, with MCP integrations for contract analysis and delivery tracking.',
     skills: [
       { name: 'MCP', highlight: true },
       { name: 'Cursor', highlight: true },
+      { name: 'Claude Code', highlight: true },
       { name: 'GitHub Copilot' },
       { name: 'Agent skills & rules' },
     ],
@@ -199,9 +246,10 @@ export const skills: SkillGroup[] = [
     label: 'State & Data',
     icon: 'state',
     skills: [
-      { name: 'Pinia' },
-      { name: 'Redux / Redux Toolkit' },
-      { name: 'React Query' },
+      { name: 'Pinia', highlight: true },
+      { name: 'Redux / Redux Toolkit', highlight: true },
+      { name: 'TanStack Query' },
+      { name: 'Zod' },
       { name: 'Axios' },
     ],
   },
@@ -213,11 +261,14 @@ export const skills: SkillGroup[] = [
     blurb:
       'Node.js and Spring Boot microservices behind complex REST APIs, documented with Swagger/OpenAPI.',
     skills: [
-      { name: 'Node.js' },
+      { name: 'Node.js', highlight: true },
+      { name: 'Java', highlight: true },
       { name: 'Spring Boot' },
-      { name: 'REST' },
+      { name: 'Hibernate / JPA' },
+      { name: 'REST', highlight: true },
       { name: 'Swagger/OpenAPI' },
-      { name: 'Microservices' },
+      { name: 'Microservices', highlight: true },
+      { name: 'JSON / XML' },
     ],
   },
   {
@@ -234,9 +285,10 @@ export const skills: SkillGroup[] = [
     label: 'Identity',
     icon: 'identity',
     skills: [
-      { name: 'OAuth 2.0' },
+      { name: 'OAuth 2.0', highlight: true, tag: 'OAuth' },
       { name: 'Auth0' },
       { name: 'Frontegg' },
+      { name: 'Microsoft Entra ID' },
       { name: 'MSAL' },
     ],
   },
@@ -246,9 +298,11 @@ export const skills: SkillGroup[] = [
     icon: 'cloud',
     featured: true,
     blurb:
-      'AWS releases through GitLab and Jenkins pipelines, monitored with Sentry and CloudWatch.',
+      'AWS and Azure releases through GitLab, Jenkins and Azure DevOps pipelines, monitored with Sentry and CloudWatch.',
     skills: [
       { name: 'AWS', highlight: true },
+      { name: 'Azure', highlight: true },
+      { name: 'Azure DevOps' },
       { name: 'GitLab CI/CD', highlight: true, tag: 'GitLab' },
       { name: 'Jenkins' },
       { name: 'Git' },
@@ -263,9 +317,24 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'TDD', highlight: true },
       { name: 'Jest' },
-      { name: 'Storybook' },
+      { name: 'Vitest' },
+      { name: 'Playwright' },
+      { name: 'JUnit' },
+      { name: 'ts-mocha / nyc' },
+      { name: 'Storybook', highlight: true },
       { name: 'Chromatic' },
       { name: 'ESLint' },
+    ],
+  },
+  {
+    id: 'architecture',
+    label: 'Architecture',
+    icon: 'architecture',
+    skills: [
+      { name: 'Micro-frontends', highlight: true },
+      { name: 'Web components' },
+      { name: 'Microservices', highlight: true },
+      { name: 'Event-driven UI' },
     ],
   },
   {
@@ -275,6 +344,8 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'Fintech' },
       { name: 'Payments' },
+      { name: 'Banking' },
+      { name: 'Professional Services' },
       { name: 'Telecom' },
       { name: 'Enterprise SaaS' },
     ],
@@ -300,6 +371,13 @@ export const achievements: AchievementEntry[] = [
     title: '100% code review coverage target',
     description:
       'Reviews and best-practice sessions on shared and critical paths; production issues fed back into standards and tests.',
+    icon: 'quality',
+  },
+  {
+    id: 'backend-gaps',
+    title: '48 backend gaps found and closed',
+    description:
+      'Reviewed the live OpenAPI and requirements tracker under a tight deadline, including a security gap in engagement list scoping, and drove each fix through to frontend integration.',
     icon: 'quality',
   },
   {
@@ -338,14 +416,14 @@ export const workPrinciples: WorkPrinciple[] = [
     id: 'quality-loop',
     title: 'Close the quality loop',
     description:
-      'Target 100% review coverage on shared and critical paths. Production errors from Sentry and CloudWatch go back into standards and tests, so the same defect doesn’t ship twice.',
+      'Target 100% review coverage on shared and critical paths, set the test-case standard with QA so cases live next to the code, and feed production errors back into standards and tests so the same defect doesn’t ship twice.',
     icon: 'quality',
   },
   {
     id: 'ai',
     title: 'AI as a team practice',
     description:
-      'Standardize MCP, Cursor, Copilot and agent rules and skills so everyone drafts, refactors and reviews against the same architecture, with engineers still accountable for what ships.',
+      'Standardize MCP, Cursor, Copilot, Claude Code and agent rules and skills so everyone drafts, refactors and reviews against the same architecture, with engineers still accountable for what ships.',
     icon: 'ai',
   },
   {
@@ -354,20 +432,5 @@ export const workPrinciples: WorkPrinciple[] = [
     description:
       'Turn BA and client requirements into scoped work and acceptance criteria. Coordinate front-end, back-end, UX and QA, mentor engineers, and help hire and onboard the next ones.',
     icon: 'people',
-  },
-];
-
-export const learning: LearningEntry[] = [
-  {
-    id: 'react-mastery',
-    title: 'React Mastery Notes',
-    description: 'My personal study notes on React, kept as a quick reference.',
-    href: '/notes/React_Mastery_Notes.pdf',
-  },
-  {
-    id: 'react-optimization',
-    title: 'React Optimization & Advanced Hooks',
-    description: 'Notes on React performance optimization and advanced hooks.',
-    href: '/notes/React_Optimization_and_Advanced_Hooks.pdf',
   },
 ];

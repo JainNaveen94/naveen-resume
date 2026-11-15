@@ -69,8 +69,8 @@ function createStyles(c: PdfPalette) {
     sectionHead: {
       flexDirection: 'row',
       alignItems: 'center',
-      marginTop: 16,
-      marginBottom: 8,
+      marginTop: 14,
+      marginBottom: 7,
       paddingBottom: 4,
       borderBottomWidth: 1,
       borderBottomColor: c.border,
@@ -86,7 +86,6 @@ function createStyles(c: PdfPalette) {
       fontFamily: PDF_DISPLAY_FONT,
       fontWeight: 600,
       fontSize: 9.5,
-      letterSpacing: 1.2,
       textTransform: 'uppercase',
       color: c.accentText,
     },
@@ -106,7 +105,7 @@ function createStyles(c: PdfPalette) {
     bulletMark: { width: 10, color: c.a2, fontWeight: 700 },
     bulletText: { flex: 1 },
 
-    entry: { marginBottom: 9 },
+    entry: { marginBottom: 8 },
 
     chipRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 4 },
     chip: {
@@ -123,23 +122,10 @@ function createStyles(c: PdfPalette) {
       marginBottom: 3,
     },
 
-    skillRow: { flexDirection: 'row', marginBottom: 4 },
+    skillRow: { flexDirection: 'row', marginBottom: 2.5 },
     skillLabel: { width: 92, fontWeight: 700, color: c.heading, fontSize: 8.5 },
     skillNames: { flex: 1, fontSize: 8.5 },
     skillCore: { fontWeight: 700, color: c.accentText },
-
-    twoCol: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' },
-    card: {
-      width: '49%',
-      marginBottom: 8,
-      padding: 8,
-      borderRadius: 6,
-      borderWidth: 1,
-      borderColor: c.border,
-      backgroundColor: c.surface,
-    },
-    cardTitle: { fontWeight: 700, color: c.heading, fontSize: 9, marginBottom: 2 },
-    cardText: { fontSize: 8.3, lineHeight: 1.45 },
 
     footer: {
       position: 'absolute',
@@ -161,7 +147,7 @@ type Styles = ReturnType<typeof createStyles>;
 
 function SectionHeader({ title, s }: { title: string; s: Styles }) {
   return (
-    <View style={s.sectionHead} minPresenceAhead={60}>
+    <View style={s.sectionHead} wrap={false} minPresenceAhead={60}>
       <View style={s.sectionDot} />
       <Text style={s.sectionTitle}>{title}</Text>
     </View>
@@ -194,7 +180,6 @@ export function ResumePdfDocument({ data, theme }: Props) {
     projects,
     skills,
     achievements,
-    workPrinciples,
     education,
   } = data;
 
@@ -206,6 +191,8 @@ export function ResumePdfDocument({ data, theme }: Props) {
       title={`${profile.fullName} — Resume`}
       author={profile.fullName}
       subject={variant.tagline}
+      creator={profile.fullName}
+      producer={profile.fullName}
       keywords="Technical Lead, Full-Stack, Vue.js, React, TypeScript, Node.js, AI-assisted engineering"
     >
       <Page size="A4" style={s.page}>
@@ -261,14 +248,14 @@ export function ResumePdfDocument({ data, theme }: Props) {
           ))}
         </View>
 
-        <SectionHeader title="About" s={s} />
+        <SectionHeader title="Professional Summary" s={s} />
         {summary.paragraphs.map((p, i) => (
           <Text key={i} style={[s.paragraph, i === 0 ? s.firstParagraph : {}]}>
             {p}
           </Text>
         ))}
 
-        <SectionHeader title="Experience" s={s} />
+        <SectionHeader title="Work Experience" s={s} />
         {experience.map((job) => (
           <View key={job.id} style={s.entry}>
             <View wrap={false}>
@@ -313,7 +300,7 @@ export function ResumePdfDocument({ data, theme }: Props) {
           </View>
         ))}
 
-        <SectionHeader title="Tech stack" s={s} />
+        <SectionHeader title="Technical Skills" s={s} />
         {skills.map((group) => (
           <View key={group.id} style={s.skillRow} wrap={false}>
             <Text style={s.skillLabel}>{group.label}</Text>
@@ -328,18 +315,8 @@ export function ResumePdfDocument({ data, theme }: Props) {
           </View>
         ))}
 
-        <SectionHeader title="How I work" s={s} />
-        <View style={s.twoCol}>
-          {workPrinciples.map((p) => (
-            <View key={p.id} style={s.card} wrap={false}>
-              <Text style={s.cardTitle}>{p.title}</Text>
-              <Text style={s.cardText}>{p.description}</Text>
-            </View>
-          ))}
-        </View>
-
         <View wrap={false}>
-          <SectionHeader title="Key achievements" s={s} />
+          <SectionHeader title="Key Achievements" s={s} />
           {achievements.map((a) => (
             <View key={a.id} style={{ marginBottom: 4 }}>
               <Text style={{ fontWeight: 700, color: c.heading }}>{a.title}</Text>
@@ -352,11 +329,10 @@ export function ResumePdfDocument({ data, theme }: Props) {
           <SectionHeader title="Education" s={s} />
           {education.map((edu) => (
             <View key={edu.degree} style={{ marginBottom: 6 }}>
-              <View style={s.entryHead}>
-                <Text style={s.entryTitle}>{edu.degree}</Text>
-                <Text style={s.entryDate}>{edu.period}</Text>
-              </View>
-              <Text style={s.entryMeta}>{edu.institution}</Text>
+              <Text style={s.blockTitle}>{edu.degree}</Text>
+              <Text style={s.entryMeta}>
+                {edu.institution} · {edu.period}
+              </Text>
             </View>
           ))}
         </View>

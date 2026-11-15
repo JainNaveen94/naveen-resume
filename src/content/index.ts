@@ -3,7 +3,6 @@ import {
   achievements,
   education,
   experience,
-  learning,
   metrics,
   profileIdentity,
   projects,
@@ -29,7 +28,6 @@ export function getResumeData(): ResumeData {
     achievements,
     education,
     workPrinciples,
-    learning,
     metrics,
   };
 }

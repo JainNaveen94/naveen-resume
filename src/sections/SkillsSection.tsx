@@ -1,4 +1,5 @@
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 import CodeIcon from '@mui/icons-material/Code';
@@ -26,6 +27,7 @@ const ICONS: Record<SkillGroupIcon, typeof CodeIcon> = {
   identity: LockOutlinedIcon,
   cloud: CloudOutlinedIcon,
   quality: VerifiedOutlinedIcon,
+  architecture: AccountTreeOutlinedIcon,
   domain: BusinessOutlinedIcon,
 };
 
@@ -258,14 +260,22 @@ export function SkillsSection({ skills, projects, activeTech, onTechSelect }: Pr
           gap: 2,
         }}
       >
-        {rest.map((g) => (
-          <GroupCard
+        {rest.map((g, i) => (
+          <Box
             key={g.id}
-            group={g}
-            activeTech={activeTech}
-            onTechSelect={onTechSelect}
-            projectTags={projectTags}
-          />
+            sx={{
+              // An odd last card would sit alone in a 3-column row; let it span the row.
+              gridColumn:
+                i === rest.length - 1 && rest.length % 3 === 1 ? { lg: '1 / -1' } : undefined,
+            }}
+          >
+            <GroupCard
+              group={g}
+              activeTech={activeTech}
+              onTechSelect={onTechSelect}
+              projectTags={projectTags}
+            />
+          </Box>
         ))}
       </Box>
     </SectionContainer>

@@ -162,7 +162,7 @@ export function ContactSection({ profile }: Props) {
       setStatus({
         type: 'info',
         message:
-          'Opening your email client as a fallback (Formspree unavailable or not configured).',
+          'Opening your email app so you can send the message directly.',
       });
     } else {
       setStatus({
@@ -176,7 +176,7 @@ export function ContactSection({ profile }: Props) {
     <SectionContainer
       id="contact"
       title="Contact"
-      subtitle="Reach out for roles, consulting, or collaboration — Formspree or your email client as fallback."
+      subtitle="Open to Technical Lead and Architect roles. Send a message and I’ll reply by email."
     >
       <Box
         sx={{

@@ -106,7 +106,15 @@ export function ProjectsSection({
                 <Stack direction="row" justifyContent="space-between" alignItems="start">
                   <Typography fontWeight={700}>{proj.title}</Typography>
                   {proj.featured ? (
-                    <Chip label="Featured" size="small" color="primary" />
+                    <Chip
+                      label="Featured"
+                      size="small"
+                      sx={{
+                        background: (t) => t.palette.gradient.brand,
+                        color: '#fff',
+                        fontWeight: 700,
+                      }}
+                    />
                   ) : null}
                 </Stack>
                 {proj.subtitle ? (
